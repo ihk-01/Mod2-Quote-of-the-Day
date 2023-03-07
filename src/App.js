@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+import {useState, useEffect} from "react";
+import logo from "./logo.svg";
 import './App.css';
+import Random from "./components/Random";
+import Results from "./components/Results";
+import Search from "./components/Search";
+import Selection from "./components/Selection";
 
-function App() {
+export default function App() {
+
+  const [quote, setQuote] = useState(null);
+
+  const getQuote = async (searchTerm) => {
+    const response = await fetch(
+      'https://api.quotable.io/search/quotes'
+    );
+  }
+  const data = await response.json();
+  setQuote(data);
+};
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <h1>Quote of the Day</h1>
+    <Random />
+    <Results />
+    <Search />
+    <Selection />
     </div>
   );
 }
 
-export default App;
+
