@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react";
+import {useState} from "react";
 
 export default function Search (props) {
     
@@ -16,7 +16,7 @@ export default function Search (props) {
     const handleSubmit = (event) => {
     //prevent page from refreshing on form submission  
         event.preventDefault();
-    //pass the search term to quotesearch prop,   
+    //pass the search term to quotesearch prop  
         props.quotesearch(formData.searchterm);
     };
 
@@ -26,14 +26,16 @@ export default function Search (props) {
     
         <form onSubmit={handleSubmit}>
             <input 
-            type="text" 
+            type="text"
+            placeholder="Search for a quote" 
+            class="no-outline"
             name="searchterm"
             onChange={handleChange}
             value={formData.searchterm}
             />
             <input 
             type="submit" 
-            value="submit"/>
+            value="Submit"/>
          </form>
     </div>
     );

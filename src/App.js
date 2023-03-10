@@ -56,8 +56,9 @@ console.log(data)
 
   return (
     <div className="App">
-      
+      <header>
       <Random random={randomQuote}/>
+      </header>
       <Search quotesearch={
         getQuote
 //          Component

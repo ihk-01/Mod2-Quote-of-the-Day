@@ -4,42 +4,49 @@
 body {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   margin: 0;
+  text-align: center;
   font-size: 1rem;
   font-weight: 1.5;
   line-height: 1.5;
-  color: #fff;
-  background-color: #3826c2;
+  color: #0c0000;
+  background-color: #6fbcc9;
 }
-/*.testimonial {
-  margin: 0 auto;
-  padding: 0 2em;
-}
-.testimonial-wrapper {
+
+h2 {
+  margin-bottom: 3rem;
+  padding-top:1rem;
+  padding-bottom:1rem;
+  padding-left:2rem;
+  padding-right:2rem;
   text-align: center;
-  max-width: 950px;
-  margin: 0 auto;
-  border: 1px solid #e6e6e6;
-  padding: 40px 25px;
-  margin-top: 50px;
+  color: #fff;
+  background-color: #3d62cf;
 }
-.testimonial-quote p {
-  line-height: 1.5;
-  font-weight: 300;
-  margin-bottom: 25px;
-  font-size: 1.375rem;
+
+input[type=text] {
+  margin-top: 3rem;
+  padding: 5px;
+  border: 2px solid #cccccc;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
 }
-.testimonial-avatar {
-  margin: -90px auto 30px;
-  width: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 0;
+
+input[type=submit] {
+  padding: 5px 15px;
+  background: #99e0b2;
+  border: 0 none;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
 }
-.testimonial-name {
-  margin-bottom: 0;
-  font-weight: 600;
-  font-size: 1rem;
+
+td {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  padding-top:1rem;
+  padding-bottom:1rem;
+  padding-left:2rem;
+  padding-right:2rem;
+  text-align: center;
+  color: #fff;
+  background-color: #3d62cf;
 }
-.testimonial-name span {
-  font-weight: 400;
-}*/

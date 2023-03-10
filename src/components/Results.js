@@ -6,10 +6,10 @@ function Results ({ quote }) {
     
     return (
       <>
-      <table>
+      <table className='table'>
       <thead>
         <tr>
-          <th>Content</th>
+          <th>Quote</th>
           <th>Author</th>
           <th>Tags</th>
         </tr>
@@ -34,7 +34,7 @@ function Results ({ quote }) {
 };
 
 const loading = () => {
-    return <h1>No Quotes to Display. Try entering search criteria.</h1>;
+    return <h1>No Quotes to Display.</h1>;
 
 };
 
