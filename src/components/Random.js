@@ -1,4 +1,6 @@
-export default function Random (props) {
-    return <h1>The Random Quote of the Day Display Component</h1>
+export default function Random ({ random }) {
+   
+    return <h2>{random.content} </h2>
+
     
-};
+}

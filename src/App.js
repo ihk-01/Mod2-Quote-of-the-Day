@@ -1,14 +1,19 @@
+//import React, { Component } from 'react';
 import {useState, useEffect} from "react";
 import './App.css';
 //import components
-import Random from "./components/Random";
+
 import Results from "./components/Results";
 import Search from "./components/Search";
-import Selection from "./components/Selection";
+import Random from "./components/Random";
+
 
 export default function App() {
 //state to hold quote data
   const [quote, setQuote] = useState(null);
+
+//state to hold random quote data
+  const [randomQuote, setRandomQuote] = useState([]);
 
 //function to get the quotes 
   const getQuote = async (searchterm) => {
@@ -26,21 +31,48 @@ console.log(data)
     }
     
 
-useEffect(() => {
-  getQuote("happiness");
-}, []);
+//function to get the random quotes
 
+    const getRandomQuote = async () => {
+
+//make fetch request and store the random response
+
+    const response = await fetch(
+      `https://api.quotable.io/random`
+    );
+
+//parse JSON response for random quote
+    const dataRandom = await response.json();
+
+//set random Quote data in random Quote state
+      setRandomQuote(dataRandom);
+      console.log(randomQuote)
+    }
+//make the function that stores the random data run every time the page loads
+  useEffect(() => {
+    getRandomQuote('');
+  }, []);
+  
 
   return (
     <div className="App">
-      <h1>Quote of the Day</h1>
-      <Random />
-      <Search quotesearch={getQuote}/>
-      <Results quote={quote}/>
-      <Selection />
+      
+      <Random random={randomQuote}/>
+      <Search quotesearch={
+        getQuote
+//          Component
+          } />
+      <Results 
+//      quote={ this.state.quote }
+      quote={quote} 
+      />
+  
+      
     </div>
   );
 }
+
+
 
 
 
