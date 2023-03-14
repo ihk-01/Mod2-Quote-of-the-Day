@@ -4,11 +4,13 @@ export default function Random ({ random }) {
 
 
 <body>
+    
     <h2>Quote of the Day</h2>
     
-          <td>{ random.content }</td>
-          <td>{ random.author }</td>
+          <td>{ random?.content }</td>
+          <td>{ random?.author }</td>
        </body>
+     
      
       )
     

@@ -1,15 +1,19 @@
 .App {
   text-align: center;
+  
 }
-body {
+
+p {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  margin: 0;
+  display: inline-block;
+  width: 100px;
+  /*padding-top:1rem;
+  padding-bottom:1rem;
+  padding-left:2rem;
+  padding-right:2rem;*/
   text-align: center;
-  font-size: 1rem;
-  font-weight: 1.5;
-  line-height: 1.5;
-  color: #0c0000;
-  background-color: #6fbcc9;
+  color: #fff;
+  background-color: #3d62cf;
 }
 
 h2 {

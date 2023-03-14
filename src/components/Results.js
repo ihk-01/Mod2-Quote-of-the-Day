@@ -1,4 +1,5 @@
 //export default function Results ({ quote }) {
+import Buttons from "./components/Buttons"
 
 function Results ({ quote }) {  
   
@@ -26,13 +27,13 @@ function Results ({ quote }) {
          })}
       </tbody>
     </table>
-  );
 
 </>
 
-        )
+)
 };
 
+ 
 const loading = () => {
     return <h1>No Quotes to Display.</h1>;
 
