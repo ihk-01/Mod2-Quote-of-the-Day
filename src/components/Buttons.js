@@ -1,7 +1,7 @@
 
 
 export default function Buttons({ nextPage, prevPage }) {
-
+    n
     return (
         <div className="prevnextContainer">
             <div className="prevnext">
