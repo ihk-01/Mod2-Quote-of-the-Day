@@ -5,15 +5,17 @@ export default function Random ({ random }) {
 
 <body>
     
-    <h2>Quote of the Day</h2>
-    
-          <td>{ random?.content }</td>
-          <td>{ random?.author }</td>
-       </body>
+    <h2>Quotes to Live By</h2>
+    <table className="randomDisplay">
+        <tbody>
+          <tr>{ random?.content }</tr>
+          <tr>{ random?.author }</tr>
+        </tbody>
+    </table>
+</body>
      
      
       )
-    
-    
+       
        
 }

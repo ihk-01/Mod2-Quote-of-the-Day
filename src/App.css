@@ -1,56 +1,120 @@
 .App {
   text-align: center;
-  
 }
 
-p {
+.randomDisplay tr{
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  display: inline-block;
-  width: 100px;
-  /*padding-top:1rem;
+  display:inline-block;
+  width: 90vw;
+  padding-top:1rem;
   padding-bottom:1rem;
   padding-left:2rem;
-  padding-right:2rem;*/
-  text-align: center;
+  padding-right:2rem;
+
   color: #fff;
-  background-color: #3d62cf;
+  background-color: #7180AC;
 }
 
 h2 {
-  margin-bottom: 3rem;
+  display:inline-block;
+  width: 90vw;
+  /*margin-bottom: 3rem;*/
   padding-top:1rem;
   padding-bottom:1rem;
   padding-left:2rem;
   padding-right:2rem;
   text-align: center;
   color: #fff;
-  background-color: #3d62cf;
+  background-color: #2B4570;
+}
+div {
+  display: inline-block;
+
+
 }
 
 input[type=text] {
   margin-top: 3rem;
+  margin-bottom: 3rem;
+  width: 250px;
   padding: 5px;
   border: 2px solid #cccccc;
   -webkit-border-radius: 5px;
   border-radius: 5px;
 }
 
-input[type=submit] {
+/*input[type=submit] {
   padding: 5px 15px;
   background: #99e0b2;
   border: 0 none;
   cursor: pointer;
   -webkit-border-radius: 5px;
   border-radius: 5px;
+}*/
+
+tbody {
+  width: 100%;
+  max-height: 30px;
+}
+
+thead tr th{
+  position: sticky;
+  max-height: 500px;
+  background-color: #A8D0DB;
 }
 
 td {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  width: 90vw;
+  min-height:10px;
   padding-top:1rem;
   padding-bottom:1rem;
   padding-left:2rem;
   padding-right:2rem;
   text-align: center;
   color: #fff;
-  background-color: #3d62cf;
+  background-color: #2B4570;
+}
+
+.special td {
+  column-width: 70px;
+}
+
+button {
+  padding: 5px 15px;
+  background: #A8D0DB;
+  border:  2px solid lightgray;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.prevnext button {
+
+  padding: 5px 15px;
+  background: #A8D0DB;
+  border: 2px solid lightgray;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+
+
+}
+.prevnextContainer {
+  width: 100vw;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+ 
+}
+
+
+.prevnext {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  display: flex;
+  width: 20vw;
+  justify-content: space-between;
+ 
+  text-align:center;
+
+
 }

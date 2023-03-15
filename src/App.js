@@ -8,6 +8,7 @@ import Search from "./components/Search";
 import Random from "./components/Random";
 import Buttons from "./components/Buttons";
 
+
 export default function App() {
 //state to hold quote data
   const [quote, setQuote] = useState(null);
@@ -25,15 +26,25 @@ const [formData, setFormData] = useState({
 
 //to go to next page and get data associated with search term
 const nextPage = () => {
+    //if totalPages=currentPage then don't allow nextPage
+
+  if (currentPage!==quote.totalPages) {
   setCurrentPage(currentPage + 1)
   getQuote(formData.searchterm)
-  };
+  
+  }
+};
 
 //to go to previous page and get data associated with search term
-const prevButton = () => {
-setCurrentPage(currentPage - 1)
-getQuote(formData.searchterm)
+const prevPage = () => {
+    //if currentPage=1 then don't allow prevPage
+  if (currentPage!==1) {
+  setCurrentPage(currentPage - 1)
+  getQuote(formData.searchterm)
+
+  }
 };
+
 
 //function to get the quotes 
   const getQuote = async (searchterm) => {
@@ -78,9 +89,10 @@ console.log(data)
       <Random random={randomQuote}/>
       </header>
       <Search quoteSearch={getQuote} formData={formData} setFormData={setFormData} />
-      <Buttons button={getQuote}/>
-      <Results quote={quote} 
-      />
+      <Results quote={quote} />
+      <Buttons nextPage={nextPage} prevPage={prevPage}/>
+
+      
     </div>
   );
 }

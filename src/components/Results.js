@@ -1,5 +1,5 @@
 //export default function Results ({ quote }) {
-import Buttons from "./components/Buttons"
+
 
 function Results ({ quote }) {  
   
@@ -19,7 +19,7 @@ function Results ({ quote }) {
       { quote.results.map( (quote, index) => {
            return (
             <tr key={ index }>
-              <td>{ quote.content }</td>
+              <td className="special">{ quote.content }</td>
               <td>{ quote.author }</td>
               <td>{ quote.tags}</td>
             </tr>
@@ -28,6 +28,7 @@ function Results ({ quote }) {
       </tbody>
     </table>
 
+<p>Page: { quote.page } of { quote.totalPages }</p>
 </>
 
 )

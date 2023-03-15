@@ -1,5 +1,6 @@
 import {useState} from "react";
 
+
 export default function Search (props) {
     
 
@@ -18,22 +19,22 @@ export default function Search (props) {
         props.quoteSearch(props.formData.searchterm);
     };
 
+    const onInput = (e) => setValue(e.target.value);
+    const [value, setValue] = useState("");
+
 //the component is returning JSX    
     return (
-    <div>
-    
+     <div>   
         <form onSubmit={handleSubmit}>
             <input 
             type="text"
-            placeholder="Search for a quote" 
+            placeholder="Search for a quote: text, author, tags" 
             class="no-outline"
             name="searchterm"
             onChange={handleChange}
-            value={props.formData.searchterm}
-            />
-            <input 
-            type="submit" 
-            value="Submit"/>
+            value={props.formData.searchterm} onInput={onInput}/>
+            
+            <button disabled={!props.formData.searchterm}>Submit</button>
          </form>
     </div>
     );
